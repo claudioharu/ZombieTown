@@ -57,6 +57,7 @@
      <Compile Include="Assets\SelectPlayerUnitsOnClicked.cs" />
      <Compile Include="Assets\ShootAtUnitsInRange.cs" />
      <Compile Include="Assets\UnitManager.cs" />
+     <Compile Include="Assets\ZombieShoot.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
