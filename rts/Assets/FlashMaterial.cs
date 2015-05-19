@@ -8,7 +8,7 @@ public class FlashMaterial : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		origColor = renderer.material.color; //Get Texture?
+		origColor = GetComponent<Renderer>().material.color; //Get Texture?
 		StartCoroutine("Flash");
 	}
 	
@@ -16,11 +16,11 @@ public class FlashMaterial : MonoBehaviour {
 	IEnumerator Flash () {
 		float t = 0;
 		while(t < flashRate){
-			renderer.material.color = Color.Lerp (origColor, Color.white, t/flashRate);
+			GetComponent<Renderer>().material.color = Color.Lerp (origColor, Color.white, t/flashRate);
 			t += Time.deltaTime; 
 			yield return null;
 		}
-		renderer.material.color = Color.white;
+		GetComponent<Renderer>().material.color = Color.white;
 		StartCoroutine("Return");
 	}
 
@@ -28,11 +28,11 @@ public class FlashMaterial : MonoBehaviour {
 	IEnumerator Return (){
 		float t = 0;
 		while(t < flashRate){
-			renderer.material.color = Color.Lerp (Color.white, origColor, t/flashRate);
+			GetComponent<Renderer>().material.color = Color.Lerp (Color.white, origColor, t/flashRate);
 			t += Time.deltaTime; 
 			yield return null;
 		}
-		renderer.material.color = origColor;
+		GetComponent<Renderer>().material.color = origColor;
 		StartCoroutine("Flash");
 	}
 }

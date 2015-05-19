@@ -16,20 +16,20 @@ public class FlashIfSelected : MonoBehaviour {
 		GameObject unitManagerObject = GameObject.FindGameObjectWithTag("PlayerUnitManager");
 		unitManager = unitManagerObject.GetComponent<UnitManager>();
 
-		origColor = renderer.material.color; //Get Texture?
-		origShader = renderer.material.shader; //Get shader
+		origColor = GetComponent<Renderer>().material.color; //Get Texture?
+		origShader = GetComponent<Renderer>().material.shader; //Get shader
 	}
 
 	void Update (){
 		if(unitManager.IsSelected(gameObject)){
-			renderer.material.shader = Shader.Find("Reflective/Specular");
+			GetComponent<Renderer>().material.shader = Shader.Find("Reflective/Specular");
 
 			StartCoroutine("Flash");
 		}
 		else{
 			StopAllCoroutines();
-			renderer.material.color = origColor;
-			renderer.material.shader = origShader;
+			GetComponent<Renderer>().material.color = origColor;
+			GetComponent<Renderer>().material.shader = origShader;
 		}
 	}
 	
@@ -37,11 +37,11 @@ public class FlashIfSelected : MonoBehaviour {
 		float t = 0;
 
 		while(t < flashRate){
-			renderer.material.color = Color.Lerp (origColor, Color.white, t/flashRate);
+			GetComponent<Renderer>().material.color = Color.Lerp (origColor, Color.white, t/flashRate);
 			t += Time.deltaTime; 
 			yield return null;
 		}
-		renderer.material.color = Color.white;
+		GetComponent<Renderer>().material.color = Color.white;
 		StartCoroutine("Return");
 	}
 	
@@ -49,11 +49,11 @@ public class FlashIfSelected : MonoBehaviour {
 	IEnumerator Return (){
 		float t = 0;
 		while(t < flashRate){
-			renderer.material.color = Color.Lerp (Color.white, origColor, t/flashRate);
+			GetComponent<Renderer>().material.color = Color.Lerp (Color.white, origColor, t/flashRate);
 			t += Time.deltaTime; 
 			yield return null;
 		}
-		renderer.material.color = origColor;
+		GetComponent<Renderer>().material.color = origColor;
 		StartCoroutine("Flash");
 	}
 }

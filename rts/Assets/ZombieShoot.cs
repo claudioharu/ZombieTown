@@ -33,8 +33,8 @@ public class ZombieShoot : MonoBehaviour {
 		if(targetEnemy != null){
 			GameObject instance = Instantiate(bullet, bulletSpaw.transform.position, bullet.transform.rotation) as GameObject;
 			
-			if(instance.rigidbody){
-				instance.rigidbody.AddForce((targetEnemy.transform.position - transform.position).normalized*speed*Time.deltaTime, ForceMode.VelocityChange);
+			if(instance.GetComponent<Rigidbody>()){
+				instance.GetComponent<Rigidbody>().AddForce((targetEnemy.transform.position - transform.position).normalized*speed*Time.deltaTime, ForceMode.VelocityChange);
 			}
 		}
 		
