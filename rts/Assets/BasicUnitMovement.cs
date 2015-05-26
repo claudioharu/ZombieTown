@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BasicUnitMovement : MonoBehaviour {
 
-	public float goalRadius = 0.01f;
+	public float goalRadius = 0.001f;
 	public float moveSpeed = 1.0f;
 	private Vector3 goal;
 
