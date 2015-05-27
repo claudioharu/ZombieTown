@@ -10,6 +10,7 @@ public class FlashIfSelected : MonoBehaviour {
 	private Shader origShader;
 
 	private UnitManager unitManager;
+    private bool coroutineRunning = false;
 
 	// Use this for initialization
 	void Start () {
@@ -22,11 +23,17 @@ public class FlashIfSelected : MonoBehaviour {
 
 	void Update (){
 		if(unitManager.IsSelected(gameObject)){
-			GetComponent<Renderer>().material.shader = Shader.Find("Reflective/Specular");
-
-			StartCoroutine("Flash");
+            if (!coroutineRunning)
+            {
+                coroutineRunning = true;
+                GetComponent<Renderer>().material.shader = Shader.Find("Reflective/Specular");
+                //Debug.Log("To começando uma nova rotina");
+                StartCoroutine("Flash");
+                
+            }
 		}
 		else{
+            coroutineRunning = false;
 			StopAllCoroutines();
 			GetComponent<Renderer>().material.color = origColor;
 			GetComponent<Renderer>().material.shader = origShader;
