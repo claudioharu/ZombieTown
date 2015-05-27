@@ -53,6 +53,7 @@
      <Compile Include="Assets\DetectClicksAndTouches.cs" />
      <Compile Include="Assets\FlashIfSelected.cs" />
      <Compile Include="Assets\FlashMaterial.cs" />
+     <Compile Include="Assets\KillingEnemies.cs" />
      <Compile Include="Assets\MoveSelectedUnitsOnRightClick.cs" />
      <Compile Include="Assets\SelectPlayerUnitsOnClicked.cs" />
      <Compile Include="Assets\ShootAtUnitsInRange.cs" />
