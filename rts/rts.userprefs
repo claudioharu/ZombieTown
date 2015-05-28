@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FlashIfSelected.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\SelectPlayerUnitsOnTrigger.cs">
     <Files>
-      <File FileName="Assets\FlashIfSelected.cs" Line="14" Column="2" />
+      <File FileName="Assets\scripts\DragSelect.cs" Line="59" Column="1" />
+      <File FileName="Assets\scripts\SelectPlayerUnitsOnTrigger.cs" Line="5" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

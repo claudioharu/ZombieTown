@@ -46,19 +46,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BasicUnitMovement.cs" />
-     <Compile Include="Assets\DeselectedPlayerUnitsOnClicked.cs" />
-     <Compile Include="Assets\DestroyOnInvisible.cs" />
-     <Compile Include="Assets\DestroyParticleEffectWhenDone.cs" />
-     <Compile Include="Assets\DetectClicksAndTouches.cs" />
-     <Compile Include="Assets\FlashIfSelected.cs" />
-     <Compile Include="Assets\FlashMaterial.cs" />
-     <Compile Include="Assets\KillingEnemies.cs" />
-     <Compile Include="Assets\MoveSelectedUnitsOnRightClick.cs" />
-     <Compile Include="Assets\SelectPlayerUnitsOnClicked.cs" />
-     <Compile Include="Assets\ShootAtUnitsInRange.cs" />
-     <Compile Include="Assets\UnitManager.cs" />
-     <Compile Include="Assets\ZombieShoot.cs" />
+     <Compile Include="Assets\scripts\BasicUnitMovement.cs" />
+     <Compile Include="Assets\scripts\DeselectPlayerUnitsOnClicked.cs" />
+     <Compile Include="Assets\scripts\DestroyOnInvisible.cs" />
+     <Compile Include="Assets\scripts\DestroyParticleEffectWhenDone.cs" />
+     <Compile Include="Assets\scripts\DetectClicksAndTouches.cs" />
+     <Compile Include="Assets\scripts\DragSelect.cs" />
+     <Compile Include="Assets\scripts\FlashIfSelected.cs" />
+     <Compile Include="Assets\scripts\FlashMaterial.cs" />
+     <Compile Include="Assets\scripts\KillingEnemies.cs" />
+     <Compile Include="Assets\scripts\MoveSelectedUnitsOnRightClick.cs" />
+     <Compile Include="Assets\scripts\SelectPlayerUnitsOnClicked.cs" />
+     <Compile Include="Assets\scripts\SelectPlayerUnitsOnTrigger.cs" />
+     <Compile Include="Assets\scripts\ShootAtUnitsInRange.cs" />
+     <Compile Include="Assets\scripts\UnitManager.cs" />
+     <Compile Include="Assets\scripts\ZombieShoot.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

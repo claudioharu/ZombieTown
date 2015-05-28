@@ -1,19 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DeselectedPlayerUnitsOnClicked : MonoBehaviour {
+public class DeselectPlayerUnitsOnClicked : MonoBehaviour {
 
 	private UnitManager unitManager;
 	
-	void Start(){
+	void Start()
+	{
 		GameObject unitManagerObject = GameObject.FindGameObjectWithTag("PlayerUnitManager");
 		unitManager = unitManagerObject.GetComponent<UnitManager>();
 	}
-
+	
 	void Clicked()
 	{
 		unitManager.DeselectAllUnits();
 	}
-	
-
 }

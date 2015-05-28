@@ -25,7 +25,9 @@ public class BasicUnitMovement : MonoBehaviour {
 			if(obj.gameObject == gameObject){
 				transform.position = goal;
 			}
+
 		}
+
 
 	}
 
