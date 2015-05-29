@@ -1,0 +1,503 @@
+fileFormatVersion: 2
+guid: ff8cdb41bce5fc54e9a75590fc3b3258
+timeCreated: 1432922807
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: abdomen
+    100002: chest
+    100004: head
+    100006: hip
+    100008: lCollar
+    100010: lFoot
+    100012: lForeArm
+    100014: lHand
+    100016: lShin
+    100018: lShldr
+    100020: lThigh
+    100022: neck
+    100024: rCollar
+    100026: rFoot
+    100028: rForeArm
+    100030: rHand
+    100032: rShin
+    100034: rShldr
+    100036: rThigh
+    100038: zombie_mummy_straight_walk
+    100040: //RootNode
+    400000: abdomen
+    400002: chest
+    400004: head
+    400006: hip
+    400008: lCollar
+    400010: lFoot
+    400012: lForeArm
+    400014: lHand
+    400016: lShin
+    400018: lShldr
+    400020: lThigh
+    400022: neck
+    400024: rCollar
+    400026: rFoot
+    400028: rForeArm
+    400030: rHand
+    400032: rShin
+    400034: rShldr
+    400036: rThigh
+    400038: zombie_mummy_straight_walk
+    400040: //RootNode
+    7400000: idle
+    7400002: straight_walk
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Default Take
+      firstFrame: 36
+      lastFrame: 114
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: zombie_mummy_straight_walk
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/lCollar
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/lCollar/lShldr
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/lCollar/lShldr/lForeArm
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/lCollar/lShldr/lForeArm/lHand
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/neck
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/neck/head
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/rCollar
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/rCollar/rShldr
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/rCollar/rShldr/rForeArm
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/rCollar/rShldr/rForeArm/rHand
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/lThigh
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/lThigh/lShin
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/lThigh/lShin/lFoot
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/rThigh
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/rThigh/rShin
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/rThigh/rShin/rFoot
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: straight_walk
+      takeName: zombie_mummy_straight_walk
+      firstFrame: 173
+      lastFrame: 476
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: zombie_mummy_straight_walk
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/lCollar
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/lCollar/lShldr
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/lCollar/lShldr/lForeArm
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/lCollar/lShldr/lForeArm/lHand
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/neck
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/neck/head
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/rCollar
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/rCollar/rShldr
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/rCollar/rShldr/rForeArm
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/abdomen/chest/rCollar/rShldr/rForeArm/rHand
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/lThigh
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/lThigh/lShin
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/lThigh/lShin/lFoot
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/rThigh
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/rThigh/rShin
+        weight: 1
+      - path: zombie_mummy_straight_walk/hip/rThigh/rShin/rFoot
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: hip
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lShin
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rShin
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: abdomen
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lCollar
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rCollar
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lShldr
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rShldr
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: zombieWalk2(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: zombie_mummy_straight_walk
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: hip
+      position: {x: 0, y: -5.47499575e-08, z: .459275901}
+      rotation: {x: .706886232, y: .706886292, z: -.0176598541, w: .0176598579}
+      scale: {x: .999999821, y: 1, z: .999999821}
+      transformModified: 1
+    - name: abdomen
+      position: {x: -.00169905717, y: 1.28275252e-10, z: -.0339839868}
+      rotation: {x: -5.41935314e-08, y: -.717813373, z: -1.71576864e-13, w: .696235597}
+      scale: {x: .99999994, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: chest
+      position: {x: -.0846596211, y: 6.39162412e-09, z: 0}
+      rotation: {x: -1.04879447e-11, y: -.000138916104, z: 4.0541603e-19, w: 1}
+      scale: {x: .999999821, y: 1, z: .999999821}
+      transformModified: 1
+    - name: lCollar
+      position: {x: -.0671332404, y: -.0347069949, z: -.00276029878}
+      rotation: {x: .0285412874, y: .0285412855, z: .706530571, w: .706530452}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: lShldr
+      position: {x: -.0319848806, y: 2.45697365e-08, z: -5.38584566e-10}
+      rotation: {x: -4.960512e-10, y: 6.10865206e-17, z: 3.03020425e-26, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: lForeArm
+      position: {x: -.101398885, y: 3.66722794e-08, z: -3.54941715e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: lHand
+      position: {x: -.0837051347, y: 2.75772205e-08, z: -3.54941743e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: neck
+      position: {x: -.101966359, y: 7.69824915e-09, z: .00552059477}
+      rotation: {x: 3.0473597e-09, y: .0403635055, z: -3.56404529e-15, w: .999185085}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: head
+      position: {x: -.0313043185, y: 2.36341036e-09, z: -7.60551289e-10}
+      rotation: {x: 0, y: 7.10349019e-15, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rCollar
+      position: {x: -.0671332404, y: .0347070061, z: -.00276029878}
+      rotation: {x: -.0285412818, y: .0285412911, z: -.706530571, w: .706530452}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rShldr
+      position: {x: -.0319848806, y: -1.44995438e-08, z: -5.38584566e-10}
+      rotation: {x: 4.960512e-10, y: -1.74532909e-17, z: 1.78023583e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rForeArm
+      position: {x: -.101398885, y: -1.12912808e-08, z: -3.54941715e-10}
+      rotation: {x: -0, y: -0, z: 1.78023583e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rHand
+      position: {x: -.0837051496, y: -8.63058869e-09, z: -3.54941743e-10}
+      rotation: {x: -0, y: -0, z: 1.78023583e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: lThigh
+      position: {x: -.0127780633, y: -.0530812889, z: .0169919934}
+      rotation: {x: -.688336015, y: .035027843, z: .723609507, w: -.0368227139}
+      scale: {x: 1.00000012, y: .999999881, z: 1}
+      transformModified: 1
+    - name: lShin
+      position: {x: -.201114535, y: 1.68695067e-08, z: -1.00948305e-09}
+      rotation: {x: .998200417, y: -.0507999323, z: .0318224132, w: .00161941536}
+      scale: {x: .999999881, y: 1, z: 1}
+      transformModified: 1
+    - name: lFoot
+      position: {x: -.192299843, y: 1.12996945e-08, z: 4.47822357e-09}
+      rotation: {x: -3.69756066e-08, y: -.542844474, z: 2.59066857e-09, w: .83983326}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rThigh
+      position: {x: -.0127780549, y: .0530812889, z: .0169919934}
+      rotation: {x: -.688336074, y: -.035027314, z: .723609507, w: .0368231982}
+      scale: {x: 1, y: .999999821, z: 1}
+      transformModified: 1
+    - name: rShin
+      position: {x: -.20111455, y: 1.17407213e-08, z: -1.00948305e-09}
+      rotation: {x: .998200417, y: .0507999174, z: .0318224095, w: -.00162862358}
+      scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: rFoot
+      position: {x: -.192299843, y: 1.68376513e-08, z: 4.47822357e-09}
+      rotation: {x: -4.49916335e-08, y: -.542844474, z: -2.5906628e-09, w: .83983326}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
