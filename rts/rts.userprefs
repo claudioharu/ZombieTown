@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\SelectPlayerUnitsOnTrigger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\BasicUnitMovement.cs">
     <Files>
-      <File FileName="Assets\scripts\DragSelect.cs" Line="59" Column="1" />
-      <File FileName="Assets\scripts\SelectPlayerUnitsOnTrigger.cs" Line="5" Column="40" />
+      <File FileName="Assets\scripts\BasicUnitMovement.cs" Line="4" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

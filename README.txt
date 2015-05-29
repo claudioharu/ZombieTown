@@ -1,4 +1,4 @@
 ZombieTown
 
-Select players: left click or left click plus ctrl (or shift)
+Select players: left click or left click plus shift
 Moving players: right click

@@ -26,6 +26,7 @@ public class BasicUnitMovement : MonoBehaviour {
 				transform.position = goal;
 			}
 
+
 		}
 
 
