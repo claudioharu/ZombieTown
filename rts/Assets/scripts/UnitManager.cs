@@ -29,7 +29,7 @@ public class UnitManager : MonoBehaviour {
 	public void SelectSingleUnit(GameObject unit){
 		selectedUnits.Clear();
 		selectedUnits.Add(unit);
-		Debug.Log(selectedUnits);
+		//Debug.Log(selectedUnits);
 	}
 
 	public void SelectAdditionalUnit(GameObject unit){
