@@ -58,11 +58,13 @@
      <Compile Include="Assets\scripts\FlashMaterial.cs" />
      <Compile Include="Assets\scripts\KillingEnemies.cs" />
      <Compile Include="Assets\scripts\MoveSelectedUnitsOnRightClick.cs" />
+     <Compile Include="Assets\scripts\MovingCamera.cs" />
      <Compile Include="Assets\scripts\SelectPlayerUnitsOnClicked.cs" />
      <Compile Include="Assets\scripts\SelectPlayerUnitsOnTrigger.cs" />
      <Compile Include="Assets\scripts\ShootAtUnitsInRange.cs" />
      <Compile Include="Assets\scripts\UnitManager.cs" />
      <Compile Include="Assets\scripts\ZombieShoot.cs" />
+     <Compile Include="Assets\scripts\ZoomingCamera.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
