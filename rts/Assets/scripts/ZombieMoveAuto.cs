@@ -7,13 +7,18 @@ public class ZombieMoveAuto : MonoBehaviour
 	private int cont = 0;
 	private Vector3 goal;
 	private float Damping = 6.0f;
+	protected Animator animacao;
+	
 	private int periodoDeAtualizacao = 10;
 	public Quaternion rotation;
 	public float moveSpeed = 1.0f;
 	public float goalRadius = 0.1f;
+	public bool temMovimento = false;
+
 	
 	void Start()
-	{
+	{	
+		animacao = GetComponent<Animator> ();
 		cont = Random.Range(0,periodoDeAtualizacao);
 		goal = transform.position;
 		rotation = Quaternion.LookRotation(goal - transform.position);
@@ -29,6 +34,7 @@ public class ZombieMoveAuto : MonoBehaviour
 			if(squareDistance<smalestDistance){
 				smalestDistance = squareDistance;
 				target = pos;
+				temMovimento = true;
 			}
 		}
 		return target;
@@ -43,17 +49,16 @@ public class ZombieMoveAuto : MonoBehaviour
 		}
 		//Move towards our goal
 		transform.position += (goal - transform.position).normalized*moveSpeed*Time.deltaTime;
-		
-		
 		transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * Damping);
-		rotation = Quaternion.LookRotation(goal - transform.position);
-		
-		foreach(Collider obj in Physics.OverlapSphere(goal,goalRadius))
-		{
-			if(obj.gameObject == gameObject)
-			{
-				goal = transform.position;
-				rotation = transform.rotation;
+
+		if(temMovimento){
+			if ( (goal - transform.position).magnitude < 3.0f){
+				temMovimento = false;
+				animacao.SetFloat("veloc",0);
+			}
+			else{
+				rotation = Quaternion.LookRotation(goal - transform.position);
+				animacao.SetFloat("veloc", 10*moveSpeed);
 			}
 		}
 		cont++;
