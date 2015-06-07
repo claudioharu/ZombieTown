@@ -3,7 +3,8 @@ using System.Collections;
 
 public class MovingCamera : MonoBehaviour {
 
-	public float camSpeed = 1.0f;
+	/*
+	 * public float camSpeed = 1.0f;
 	public float GUIsize = 40.0f;
 
 	
@@ -28,5 +29,27 @@ public class MovingCamera : MonoBehaviour {
 
 
 
+	}*/
+	public float horizontalSpeed = 40;
+	public float verticalSpeed = 40;
+	public float cameraRotateSpeed = 80;
+	private Vector3 CamRotY;
+
+	void Update(){
+
+		float horizontal = Input.GetAxis("Horizontal") * horizontalSpeed * Time.deltaTime;  
+		float vertical = Input.GetAxis("Vertical") * verticalSpeed * Time.deltaTime;
+		//float rotation = Input.GetAxis("Rotation");
+
+		transform.Translate(Vector3.down * -vertical);
+		transform.Translate(Vector3.right * horizontal);
+
+	
+		if (Input.GetKey ("q")){
+			transform.Rotate (Vector3.up, cameraRotateSpeed * Time.deltaTime, Space.World);
+		}
+		if(Input.GetKey ("e")){
+			transform.Rotate (Vector3.up, -cameraRotateSpeed * Time.deltaTime, Space.World);
+		}
 	}
 }
