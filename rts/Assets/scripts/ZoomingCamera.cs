@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 
 public class ZoomingCamera : MonoBehaviour {
@@ -22,7 +23,7 @@ public class ZoomingCamera : MonoBehaviour {
 			distance -= Input.GetAxis("Mouse ScrollWheel") * sensitivityDistance;
 			if(distance >= 45.0f) distance = 45.0f;
 			if(distance <= 10.0f) distance = 10.0f;
-			print(distance);
+			//print(distance);
 
 			GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, distance, Time.deltaTime * damping);
 

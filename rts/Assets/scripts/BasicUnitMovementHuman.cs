@@ -4,14 +4,14 @@ using System.Collections;
 public class BasicUnitMovementHuman : MonoBehaviour {
 
 	protected Animator animacao;
+
 	private NavMeshAgent agent;
 	private Vector3 goal;
 	private float Damping = 6.0f;
 	
 	public Quaternion rotation;
 	public float moveSpeed = 1.0f;
-	public float goalRadius = 0.1f;
-	
+	public float goalRadius = 0.1f;	
 	public bool temMovimento = false;
 
 
