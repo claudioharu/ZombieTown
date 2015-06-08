@@ -5,6 +5,8 @@ Project("{9321DE6B-7EF6-B1AF-A10D-8FD803FBD437}") = "rts", "Assembly-CSharp.cspr
 EndProject
 Project("{9321DE6B-7EF6-B1AF-A10D-8FD803FBD437}") = "rts", "Assembly-CSharp-Editor.csproj", "{8BAE8CF5-A462-2533-680E-05B5F802136E}"
 EndProject
+Project("{9321DE6B-7EF6-B1AF-A10D-8FD803FBD437}") = "rts", "Assembly-UnityScript.unityproj", "{62527FD3-7B35-E122-721A-9BC7317FD3A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{8BAE8CF5-A462-2533-680E-05B5F802136E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BAE8CF5-A462-2533-680E-05B5F802136E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BAE8CF5-A462-2533-680E-05B5F802136E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62527FD3-7B35-E122-721A-9BC7317FD3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62527FD3-7B35-E122-721A-9BC7317FD3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62527FD3-7B35-E122-721A-9BC7317FD3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62527FD3-7B35-E122-721A-9BC7317FD3A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																																																	GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																					GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
