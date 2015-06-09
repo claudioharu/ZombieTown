@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZombieShoot : MonoBehaviour {
+public class ShootSpawn : MonoBehaviour {
 	
 	private GameObject targetEnemy;
 	
