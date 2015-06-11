@@ -19,6 +19,7 @@ public class ShootSpawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		
 		Collider[] enemysArray = Physics.OverlapSphere(transform.position, radius, mask);
 		
@@ -34,7 +35,7 @@ public class ShootSpawn : MonoBehaviour {
 			GameObject instance = Instantiate(bullet, bulletSpaw.transform.position, bullet.transform.rotation) as GameObject;
 			
 			if(instance.GetComponent<Rigidbody>()){
-				instance.GetComponent<Rigidbody>().AddForce((targetEnemy.transform.position - transform.position).normalized*speed*Time.deltaTime, ForceMode.VelocityChange);
+				instance.GetComponent<Rigidbody>().AddForce((bulletSpaw.transform.forward).normalized*speed*Time.deltaTime, ForceMode.VelocityChange);
 			}
 		}
 		

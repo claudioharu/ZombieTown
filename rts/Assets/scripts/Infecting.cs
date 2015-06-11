@@ -21,13 +21,12 @@ public class Infecting : MonoBehaviour {
 		//Invoke("InfectingHumans", infectionTime);
 	}
 
-	void OnTriggerEnter(Collider collision)
+	void OnCollisionEnter(Collision collision)
 	{
 		foreach (string tag in infectionTags)
 		{
-			if (collision.tag == tag)
+			if (collision.collider.tag == tag)
 			{
-				print("chegou aqui");
 				Destroy(collision.gameObject);
 				Instantiate(unitType, collision.gameObject.transform.position,  unitType.transform.rotation);
 				//Destroy(gameObject);
