@@ -95,6 +95,7 @@
      <Compile Include="Assets\scripts\FlashMaterial.cs" />
      <Compile Include="Assets\scripts\Infecting.cs" />
      <Compile Include="Assets\scripts\KillingEnemies.cs" />
+     <Compile Include="Assets\scripts\Menu.cs" />
      <Compile Include="Assets\scripts\MoveSelectedUnitsOnRightClick.cs" />
      <Compile Include="Assets\scripts\MovingCamera.cs" />
      <Compile Include="Assets\scripts\SelectPlayerUnitsOnClicked.cs" />
