@@ -39,11 +39,27 @@ public class MovingCamera : MonoBehaviour {
 
 		float horizontal = Input.GetAxis("Horizontal") * horizontalSpeed * Time.deltaTime;  
 		float vertical = Input.GetAxis("Vertical") * verticalSpeed * Time.deltaTime;
-		//float rotation = Input.GetAxis("Rotation");
 
-		transform.Translate(Vector3.down * -vertical);
-		transform.Translate(Vector3.right * horizontal);
+		float zPosition = transform.position.z;
+		if(zPosition < 228.0f && zPosition > -191.0f){
+			transform.Translate(Vector3.down * -vertical);
+			zPosition = transform.position.z;
+			if(zPosition > 228.0f) transform.position += new Vector3(0.0f,0.0f,-1.5f);
+			if(zPosition < -191.0f) transform.position += new Vector3(0.0f,0.0f,1.5f);
+		}
+		if(zPosition > 228.0f) transform.position += new Vector3(0.0f,0.0f,-1.5f);
+		if(zPosition < -191.0f) transform.position += new Vector3(0.0f,0.0f,1.5f);
 
+
+		float xPosition = transform.position.x;
+		if(xPosition < 330.0f && xPosition > -89.0f){
+			transform.Translate(Vector3.right * horizontal);
+			xPosition = transform.position.x;
+			if(xPosition > 330.0f) transform.position += new Vector3(-1.5f,0.0f,0.0f);
+			if(xPosition < -89.0f) transform.position += new Vector3(1.5f,0.0f,0.0f);
+		}
+		if(xPosition > 330.0f) transform.position += new Vector3(-1.5f,0.0f,0.0f);
+		if(xPosition < -89.0f) transform.position += new Vector3(1.5f,0.0f,0.0f);
 	
 		if (Input.GetKey ("q")){
 			transform.Rotate (Vector3.up, cameraRotateSpeed * Time.deltaTime, Space.World);

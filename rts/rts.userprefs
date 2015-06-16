@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Menu.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\MovingCamera.cs">
     <Files>
-      <File FileName="Assets\scripts\Menu.cs" Line="7" Column="19" />
+      <File FileName="Assets\scripts\MovingCamera.cs" Line="61" Column="21" />
+      <File FileName="Assets\scripts\ZoomingCamera.cs" Line="25" Column="43" />
+      <File FileName="Assets\scripts\BasicUnitMovement.cs" Line="30" Column="63" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
