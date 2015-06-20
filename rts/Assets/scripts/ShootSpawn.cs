@@ -6,6 +6,7 @@ public class ShootSpawn : MonoBehaviour {
 	private GameObject targetEnemy;
 	
 	public GameObject bullet;
+    public GameObject laser;
 	public LayerMask mask;
 	public Transform bulletSpaw;
 	
@@ -21,7 +22,7 @@ public class ShootSpawn : MonoBehaviour {
 	void Update () {
 
 		
-		Collider[] enemysArray = Physics.OverlapSphere(transform.position, radius, mask);
+		Collider[] enemysArray = Physics.OverlapSphere(laser.transform.position, radius, mask);
 		
 		if(enemysArray.Length > 0)
 			targetEnemy = enemysArray[0].gameObject;

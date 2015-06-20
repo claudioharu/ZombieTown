@@ -90,6 +90,7 @@
      <Compile Include="Assets\scripts\DestroyOnInvisible.cs" />
      <Compile Include="Assets\scripts\DestroyParticleEffectWhenDone.cs" />
      <Compile Include="Assets\scripts\DetectClicksAndTouches.cs" />
+     <Compile Include="Assets\scripts\DragHanglerSentry.cs" />
      <Compile Include="Assets\scripts\DragSelect.cs" />
      <Compile Include="Assets\scripts\FlashIfSelected.cs" />
      <Compile Include="Assets\scripts\FlashMaterial.cs" />
