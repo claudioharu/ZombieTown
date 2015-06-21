@@ -52,14 +52,14 @@ public class MovingCamera : MonoBehaviour {
 
 
 		float xPosition = transform.position.x;
-		if(xPosition < 330.0f && xPosition > -89.0f){
+		if(xPosition < 315.0f && xPosition > -75.0f){
 			transform.Translate(Vector3.right * horizontal);
 			xPosition = transform.position.x;
-			if(xPosition > 330.0f) transform.position += new Vector3(-1.5f,0.0f,0.0f);
-			if(xPosition < -89.0f) transform.position += new Vector3(1.5f,0.0f,0.0f);
+			if(xPosition > 315.0f) transform.position += new Vector3(-1.5f,0.0f,0.0f);
+			if(xPosition < -75.0f) transform.position += new Vector3(1.5f,0.0f,0.0f);
 		}
-		if(xPosition > 330.0f) transform.position += new Vector3(-1.5f,0.0f,0.0f);
-		if(xPosition < -89.0f) transform.position += new Vector3(1.5f,0.0f,0.0f);
+		if(xPosition > 315.0f) transform.position += new Vector3(-1.5f,0.0f,0.0f);
+		if(xPosition < -75.0f) transform.position += new Vector3(1.5f,0.0f,0.0f);
 	
 		if (Input.GetKey ("q")){
 			transform.Rotate (Vector3.up, cameraRotateSpeed * Time.deltaTime, Space.World);

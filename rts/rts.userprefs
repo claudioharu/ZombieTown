@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\buildings\Assets\PositionSentry.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ActivateText.cs">
     <Files>
-      <File FileName="..\..\buildings\Assets\DragHanglerSentry.cs" Line="7" Column="2" />
-      <File FileName="..\..\buildings\Assets\PositionSentry.cs" Line="20" Column="1" />
+      <File FileName="Assets\scripts\ActivateText.cs" Line="10" Column="2" />
+      <File FileName="Assets\scripts\DragHanglerSentry.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\RotateSentry.cs" Line="12" Column="34" />
+      <File FileName="Assets\scripts\FlashIfSelected.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\UnitManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

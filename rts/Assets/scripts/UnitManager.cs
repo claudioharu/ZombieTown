@@ -15,13 +15,9 @@ public class UnitManager : MonoBehaviour {
 	//Checking selected units
 	public bool IsSelected(GameObject unit){
 		if(selectedUnits.Contains(unit)){
-
-
 			return true;
 		}
 		else{
-
-
 			return false;
 		}
 	}

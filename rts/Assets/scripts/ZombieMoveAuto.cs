@@ -30,10 +30,11 @@ public class ZombieMoveAuto : MonoBehaviour
 		rotation = Quaternion.LookRotation(goal - transform.position);
 		
 	}
+
 	bool visible(Vector3 pos){
 		Vector3 newDirection = pos - transform.position;
 		 // the vector that we want to measure an angle from
-		Vector3 referenceForward = Vector3.forward;/* some vector that is not Vector3.up */
+		Vector3 referenceForward = transform.forward;/* some vector that is not Vector3.up */
 		return Vector3.Angle(newDirection, referenceForward)<FOV;
 		/*/ the vector perpendicular to referenceForward (90 degrees clockwise)
 		// (used to determine if angle is positive or negative)
@@ -50,6 +51,7 @@ public class ZombieMoveAuto : MonoBehaviour
 		float finalAngle = sign * angle;
 		return !(finalAngle>FOW || finalAngle < -FOV );*/
 	}
+
 	Vector3 procuraAlgum(){
 		Vector3 target = goal;
 		perseguindo = false;

@@ -5,10 +5,12 @@ using UnityEngine.EventSystems;
 public class DragHanglerSentry : MonoBehaviour, IPointerClickHandler {
 
 	public GameObject unitType;
-	private GameObject unit;
+
+
 	private bool creatingUnit = false;
 	private Vector3 dist;
 	private float posX, posY;
+
 
 
 	public void OnPointerClick (PointerEventData eventData)
@@ -32,7 +34,9 @@ public class DragHanglerSentry : MonoBehaviour, IPointerClickHandler {
 				Vector3 curPos = new Vector3(Input.mousePosition.x , Input.mousePosition.y , dist.z); 
 				Vector3 worldPos = Camera.main.ScreenToWorldPoint(curPos);
 
+
 				Instantiate(unitType, worldPos, unitType.transform.rotation);
+
 				creatingUnit = false;
 			}
 		}
