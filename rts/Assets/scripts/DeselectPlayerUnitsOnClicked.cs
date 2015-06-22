@@ -4,6 +4,9 @@ using System.Collections;
 public class DeselectPlayerUnitsOnClicked : MonoBehaviour {
 
 	private UnitManager unitManager;
+
+	public string[] objectsToActivate;
+
 	
 	void Start()
 	{
@@ -14,5 +17,14 @@ public class DeselectPlayerUnitsOnClicked : MonoBehaviour {
 	void Clicked()
 	{
 		unitManager.DeselectAllUnits();
+		foreach(string tag in objectsToActivate)
+		{
+			GameObject [] aux;
+			aux = GameObject.FindGameObjectsWithTag(tag);
+			foreach(GameObject obj in aux){
+				obj.SetActiveRecursively(false);
+			}
+		}
+
 	}
 }

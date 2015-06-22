@@ -4,6 +4,8 @@ using System.Collections;
 public class SelectPlayerUnitsOnClicked : MonoBehaviour {
 
 	private UnitManager unitManager;
+	public GameObject[] objectsToActivate;
+
 	
 	void Start()
 	{
@@ -21,7 +23,10 @@ public class SelectPlayerUnitsOnClicked : MonoBehaviour {
 			unitManager.SelectAdditionalUnit(gameObject);
 		}
 		
-
+		foreach(GameObject obj in objectsToActivate)
+		{
+			obj.SetActiveRecursively(true);
+		}
 
 	}
 }

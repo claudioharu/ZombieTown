@@ -5,7 +5,8 @@ using System.Collections.Generic;
 public class SelectPlayerUnitsOnTrigger : MonoBehaviour
 {
 	public string[] tags;
-	
+	public GameObject[] objectsToActivate;
+
 	private UnitManager unitManager;
 	private bool willSelect = false;
 	
@@ -24,6 +25,11 @@ public class SelectPlayerUnitsOnTrigger : MonoBehaviour
 			{
 				willSelect = true;
 				unitManager.SelectAdditionalUnit(gameObject);
+
+				foreach(GameObject obj in objectsToActivate)
+				{
+					obj.SetActiveRecursively(true);
+				}
 				
 				return;
 			}
@@ -37,6 +43,10 @@ public class SelectPlayerUnitsOnTrigger : MonoBehaviour
             if (col.tag == tag)
             {
                 willSelect = false;
+				foreach(GameObject obj in objectsToActivate)
+				{
+					obj.SetActiveRecursively(false);
+				}
             }
         }
     }
@@ -48,6 +58,7 @@ public class SelectPlayerUnitsOnTrigger : MonoBehaviour
             if (willSelect)
             {
                 willSelect = false;
+
                 unitManager.SelectAdditionalUnit(gameObject);
             }
         }
