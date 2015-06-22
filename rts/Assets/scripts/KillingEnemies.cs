@@ -11,6 +11,7 @@ public class KillingEnemies : MonoBehaviour {
 		{
 			if (collision.collider.tag == tag)
 			{
+				ScreenSystem.zombiesKilled += 1;
 				Destroy(collision.gameObject);
                 Destroy(gameObject);
 				return;

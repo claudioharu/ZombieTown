@@ -28,6 +28,8 @@ public class Infecting : MonoBehaviour {
 			if (collision.collider.tag == tag)
 			{
 				Destroy(collision.gameObject);
+				ScreenSystem.humans -= 1;
+				ScreenSystem.zombiesAlive += 1;
 				Instantiate(unitType, collision.gameObject.transform.position,  unitType.transform.rotation);
 				//Destroy(gameObject);
 				return;

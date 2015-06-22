@@ -11,8 +11,7 @@ public class DragHanglerSentry : MonoBehaviour, IPointerClickHandler {
 	private Vector3 dist;
 	private float posX, posY;
 
-
-
+	
 	public void OnPointerClick (PointerEventData eventData)
 	{
 		//print (Input.mousePosition);
@@ -36,6 +35,7 @@ public class DragHanglerSentry : MonoBehaviour, IPointerClickHandler {
 
 
 				Instantiate(unitType, worldPos, unitType.transform.rotation);
+				ScreenSystem.sentries += 1;
 
 				creatingUnit = false;
 			}
