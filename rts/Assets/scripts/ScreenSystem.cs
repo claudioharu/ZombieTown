@@ -22,7 +22,7 @@ public class ScreenSystem : MonoBehaviour {
 		GUI.Label (new Rect(150, 10, 200, 30), "Sentries: " + sentries);
 		GUI.Label (new Rect(250, 10, 200, 30), "Humans: " + humans);
 		GUI.Label (new Rect(340, 10, 200, 30), "Soldiers: " + soldiers);
-		GUI.Label (new Rect(440, 10, 200, 30), "Zombies Alived: " + zombiesAlive);
+		GUI.Label (new Rect(440, 10, 200, 30), "Zombies Alive: " + zombiesAlive);
 
 	}
 
