@@ -7,6 +7,14 @@ public class Menu : MonoBehaviour {
 		Application.LoadLevel(1);
 	}
 
+	public void EnterTown(){
+		Application.LoadLevel(2);
+	}
+
+	public void Back(){
+		Application.LoadLevel("menu");
+	}
+	
 	public void Quit(){
 		Application.Quit();
 	}
