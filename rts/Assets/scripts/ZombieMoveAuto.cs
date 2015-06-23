@@ -10,7 +10,8 @@ public class ZombieMoveAuto : MonoBehaviour
 	private Vector3 goal;
 	private float Damping = 6.0f;	
 	private int periodoDeAtualizacao = 10;
-
+	private int random;
+	private GameObject [] objs;
 
 	public Quaternion rotation;
 	public float moveSpeed = 1.0f;
@@ -22,13 +23,14 @@ public class ZombieMoveAuto : MonoBehaviour
 	
 	void Start()
 	{	
+		objs = GameObject.FindGameObjectsWithTag("WayPoint");
 		animacao = GetComponent<Animator> ();
         agent = GetComponent<NavMeshAgent>();
 
 		cont = Random.Range(0,periodoDeAtualizacao);
 		goal = transform.position;
 		rotation = Quaternion.LookRotation(goal - transform.position);
-		
+		random = Random.Range(0, objs.Length - 1);
 	}
 
 	bool visible(Vector3 pos){
@@ -36,20 +38,7 @@ public class ZombieMoveAuto : MonoBehaviour
 		 // the vector that we want to measure an angle from
 		Vector3 referenceForward = transform.forward;/* some vector that is not Vector3.up */
 		return Vector3.Angle(newDirection, referenceForward)<FOV;
-		/*/ the vector perpendicular to referenceForward (90 degrees clockwise)
-		// (used to determine if angle is positive or negative)
-		Vector3 referenceRight= Vector3.Cross(Vector3.up, referenceForward);
- 
-		// Get the angle in degrees between 0 and 180
-		float angle = Vector3.Angle(newDirection, referenceForward);
- 
-		// Determine if the degree value should be negative.  Here, a positive value
-		// from the dot product means that our vector is on the right of the reference vector   
-		// whereas a negative value means we're on the left.
-		float sign = Mathf.Sign(Vector3.Dot(newDirection, referenceRight));
- 
-		float finalAngle = sign * angle;
-		return !(finalAngle>FOW || finalAngle < -FOV );*/
+
 	}
 
 	Vector3 procuraAlgum(){
@@ -66,7 +55,26 @@ public class ZombieMoveAuto : MonoBehaviour
 				perseguindo = true;
 			}
 		}
-		return target;
+		if(perseguindo)
+			return target;
+		else{
+			if (agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0){
+				random = Random.Range(0, objs.Length - 1);
+			}
+			GameObject obj = objs[random];
+				//foreach (GameObject obj in GameObject.FindGameObjectsWithTag("WayPoint")){
+				Vector3 pos = obj.transform.position;
+				//float squareDistance = (transform.position - pos).sqrMagnitude;
+				//if(visible(pos) && squareDistance<smalestDistance && squareDistance < visionThreshhold){
+				//	smalestDistance = squareDistance;
+					
+					temMovimento = true;
+					perseguindo = true;
+					return pos;
+			
+				//}
+			//}//
+		}
 	}
 	//Vector3 passoRandom(){
 	//	Vector3 resposta = transform.position + Random.Range(-180,180)
@@ -83,7 +91,8 @@ public class ZombieMoveAuto : MonoBehaviour
 		/*transform.position += (goal - transform.position).normalized*moveSpeed*Time.deltaTime;
 		*/transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * Damping);
         
-		/*if(perseguindo)*/agent.SetDestination(goal);
+		if(perseguindo)
+		 agent.SetDestination(goal);
 		/*else{
 			agent.Stop();
 			agent.velocity=Vector3.zero;

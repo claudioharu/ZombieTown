@@ -1,3 +1,59 @@
-Base path: D:/Program Files (x86)/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-7964
+Base path: C:/Program Files/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-8380
 Cmd: getPlatforms
+Cmd: compileSnippet
+  api=1 type=0 insize=39955 outsize=1000 kw=POINT _TERRAIN_NORMAL_MAP ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=39955 outsize=1333 kw=POINT _TERRAIN_NORMAL_MAP ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=73109 outsize=3633 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION BILLBOARD_FACE_CAMERA_POS ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=73109 outsize=1243 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION BILLBOARD_FACE_CAMERA_POS ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=938 outsize=901 kw=POINT SHADOWS_OFF _ALPHAPREMULTIPLY_ON ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=938 outsize=2219 kw=POINT SHADOWS_OFF _ALPHAPREMULTIPLY_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=73109 outsize=3427 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION BILLBOARD_FACE_CAMERA_POS ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=73109 outsize=1032 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION BILLBOARD_FACE_CAMERA_POS ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=4450 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=977 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=8211 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FACING_LEAF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=1032 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FACING_LEAF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=4856 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FROND ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=1032 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FROND ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=8033 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_LEAF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=1032 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_LEAF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=4539 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH_BLEND ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=1071 kw=POINT EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH_BLEND ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=4650 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=1181 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=8432 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FACING_LEAF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=1243 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FACING_LEAF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=5024 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FROND ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=1243 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_FROND ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=8254 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_LEAF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=1243 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_LEAF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=408601 outsize=4739 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH_BLEND ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=408601 outsize=1275 kw=POINT LOD_FADE_CROSSFADE EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_BRANCH_BLEND ok=1
