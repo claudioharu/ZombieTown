@@ -12,14 +12,18 @@ public class Infecting : MonoBehaviour {
 
 	//private int numberToInfect;
 
-	// Use this for initialization
-	void Start () {
+	
+	void Start()
+	{
 		if(humanPosition == null)
 		{
 			humanPosition = gameObject;
 		}
-		//Invoke("InfectingHumans", infectionTime);
+		//GameObject unitManagerObject = GameObject.FindGameObjectWithTag("PlayerUnitManager");
+		//unitManager = unitManagerObject.GetComponent<UnitManager>();
 	}
+
+	// Use this for initialization
 
 	void OnCollisionEnter(Collision collision)
 	{
@@ -27,6 +31,7 @@ public class Infecting : MonoBehaviour {
 		{
 			if (collision.collider.tag == tag)
 			{
+			//	unitManager.DeselectAllUnits();
 				Destroy(collision.gameObject);
 				ScreenSystem.humans -= 1;
 				ScreenSystem.zombiesAlive += 1;
