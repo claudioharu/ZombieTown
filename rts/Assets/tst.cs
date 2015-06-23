@@ -9,7 +9,7 @@ public class tst : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		GUI.Label(new Rect(0,-1000 + (Time.time*100),Screen.width, 1000),"Some long text");
+	void FixedUpdate () {
+		transform.position += transform.up * Time.deltaTime*100;
 	}
 }
