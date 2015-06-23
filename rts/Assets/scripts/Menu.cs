@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void EnterTown(){
+		TitleSongController.Instance.DestroySong();
 		Application.LoadLevel(2);
 	}
 
