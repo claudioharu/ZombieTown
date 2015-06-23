@@ -101,6 +101,7 @@
      <Compile Include="Assets\scripts\Menu.cs" />
      <Compile Include="Assets\scripts\MoveSelectedUnitsOnRightClick.cs" />
      <Compile Include="Assets\scripts\MovingCamera.cs" />
+     <Compile Include="Assets\scripts\RescuePointScript.cs" />
      <Compile Include="Assets\scripts\RotateSentry.cs" />
      <Compile Include="Assets\scripts\ScreenSystem.cs" />
      <Compile Include="Assets\scripts\SelectPlayerUnitsOnClicked.cs" />

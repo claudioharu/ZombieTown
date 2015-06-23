@@ -3,7 +3,12 @@ guid: 5d7440015fff4a24ca07d22d9d188fc8
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: HH-65C_Dauphin_USCG_HulBlock
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
