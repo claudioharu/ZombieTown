@@ -13,7 +13,8 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 	private float posX, posY;
 	public static bool noMoney = false;
 	public static float timer = 0.0f;
-	
+	public Transform positionSoldier;
+
 	public void OnPointerClick (PointerEventData eventData)
 	{
 		print("eu");
@@ -44,13 +45,13 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 		//print (creatingUnit);
 		if(creatingUnit){
 			
-			if(Input.GetMouseButton(1)){
+			//if(Input.GetMouseButton(1)){
 				
 				Vector3 curPos = new Vector3(Input.mousePosition.x , Input.mousePosition.y , dist.z); 
 				Vector3 worldPos = Camera.main.ScreenToWorldPoint(curPos);
 				
 				
-				Instantiate(unitType, worldPos, unitType.transform.rotation);
+				Instantiate(unitType, positionSoldier.position, unitType.transform.rotation);
 				ScreenSystem.soldiers += 1;
 				ScreenSystem.money -= 500;
 				if (ScreenSystem.money < 0) {
@@ -58,7 +59,7 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 				}
 				
 				creatingUnit = false;
-			}
+			//}
 		}
 	}
 }
