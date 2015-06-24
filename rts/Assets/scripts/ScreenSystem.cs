@@ -11,6 +11,7 @@ public class ScreenSystem : MonoBehaviour {
 	public static int zombiesAlive;
 	public static int points = 0;
 	public static int money = 1000;
+	public static int humansRescued = 0;
 	
 	void OnGUI(){
 		
@@ -21,12 +22,13 @@ public class ScreenSystem : MonoBehaviour {
 		
 		GUI.skin = guiSkin;
 		GUI.Label (new Rect(10, 10, 200, 30), "Zombies Killed: " + zombiesKilled);
-		GUI.Label (new Rect(150, 10, 200, 30), "Sentries: " + sentries);
-		GUI.Label (new Rect(250, 10, 200, 30), "Humans: " + humans);
-		GUI.Label (new Rect(340, 10, 200, 30), "Soldiers: " + soldiers);
-		GUI.Label (new Rect(440, 10, 200, 30), "Zombies Alive: " + zombiesAlive);
-		GUI.Label (new Rect(580, 10, 200, 30), "Points: " + points);
-		GUI.Label (new Rect(690, 10, 200, 30), "Z$ " + money);
+		GUI.Label (new Rect(10, 30, 200, 30), "Zombies Alive: " + zombiesAlive);
+		GUI.Label (new Rect(170, 10, 200, 30), "Humans Alive: " + humans);
+		GUI.Label (new Rect(170, 30, 200, 30), "Humans Rescued: " + humansRescued);
+		GUI.Label (new Rect(350, 10, 200, 30), "Soldiers: " + soldiers);
+		GUI.Label (new Rect(470, 10, 200, 30), "Sentries: " + sentries);
+		GUI.Label (new Rect(590, 10, 200, 30), "Points: " + points);
+		GUI.Label (new Rect(705, 10, 200, 30), "Z$ " + money);
 	}
 	
 	

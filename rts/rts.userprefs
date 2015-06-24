@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\DayAndNight.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\RescuePointScript.cs">
     <Files>
-      <File FileName="Assets\scripts\DayAndNight.cs" Line="12" Column="10" />
-      <File FileName="Assets\scripts\Infecting.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ScreenSystem.cs" Line="32" Column="3" />
+      <File FileName="Assets\scripts\RescuePointScript.cs" Line="28" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
