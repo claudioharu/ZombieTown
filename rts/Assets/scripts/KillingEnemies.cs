@@ -12,8 +12,10 @@ public class KillingEnemies : MonoBehaviour {
 			if (collision.collider.tag == tag)
 			{
 				ScreenSystem.zombiesKilled += 1;
+				ScreenSystem.points += 100;
+				ScreenSystem.money += 100;
 				Destroy(collision.gameObject);
-                Destroy(gameObject);
+				Destroy(gameObject);
 				return;
 			}
 		}

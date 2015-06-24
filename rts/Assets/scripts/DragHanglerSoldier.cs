@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 
 public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
-
+	
 	public GameObject unitType;
 	
 	
@@ -15,21 +15,24 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 	
 	public void OnPointerClick (PointerEventData eventData)
 	{
-		//print("eu");
-
-
+		print("eu");
+		
 		dist = Camera.main.WorldToScreenPoint(unitType.transform.position);
 		
 		creatingUnit = true;
 		posX = Input.mousePosition.x - dist.x;
 		posY = Input.mousePosition.y - dist.y;
+		
+		if (ScreenSystem.money < 500) {
+			creatingUnit = false;
+		}
 	}
 	
 	public void FixedUpdate()
 	{
 		//print (creatingUnit);
 		if(creatingUnit){
-
+			
 			if(Input.GetMouseButton(1)){
 				
 				Vector3 curPos = new Vector3(Input.mousePosition.x , Input.mousePosition.y , dist.z); 
@@ -37,7 +40,11 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 				
 				
 				Instantiate(unitType, worldPos, unitType.transform.rotation);
-				ScreenSystem.sentries += 1;
+				ScreenSystem.soldiers += 1;
+				ScreenSystem.money -= 500;
+				if (ScreenSystem.money < 0) {
+					ScreenSystem.money = 0;
+				}
 				
 				creatingUnit = false;
 			}
