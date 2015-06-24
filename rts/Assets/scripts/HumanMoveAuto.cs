@@ -115,11 +115,11 @@ public class HumanMoveAuto : MonoBehaviour
 		if(temMovimento){
 			if ( (goal - transform.position).magnitude < 1.0f){
 				temMovimento = false;
-				animacao.SetFloat("veloc",0);
+				animacao.SetFloat("speed",0);
 			}
 			else{
 				rotation = Quaternion.LookRotation(goal - transform.position);
-				animacao.SetFloat("veloc", 10*moveSpeed);
+				animacao.SetFloat("speed", 10*moveSpeed);
 			}
 		}
 		cont++;

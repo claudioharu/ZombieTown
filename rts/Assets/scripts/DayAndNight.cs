@@ -6,11 +6,11 @@ public class DayAndNight : MonoBehaviour {
 	public Light[] lights;
 	public float dayLength = 100;
 
-	private bool night = false;
+	public static bool night = false;
 
 	void makingLight(){
+		night = !night;
 		foreach (Light light in lights){
-			night = !night;
 			light.enabled = !light.enabled;
 		}
 		//Alterar a velocidade dos zumbis

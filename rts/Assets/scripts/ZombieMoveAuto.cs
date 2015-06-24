@@ -13,6 +13,8 @@ public class ZombieMoveAuto : MonoBehaviour
 	private int random;
 	private GameObject [] objs;
 
+	public float speedDay = 2.5f;
+	public float speedNight = 10f;
 	public string[] toFollow;
 	public Quaternion rotation;
 	public float moveSpeed = 1.0f;
@@ -108,8 +110,15 @@ public class ZombieMoveAuto : MonoBehaviour
 		/*transform.position += (goal - transform.position).normalized*moveSpeed*Time.deltaTime;
 		*/transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * Damping);
         
-		if(perseguindo)
-		 agent.SetDestination(goal);
+		if(perseguindo){
+			if (DayAndNight.night){
+				agent.speed = speedNight;
+			}
+			else{
+				agent.speed = speedDay;
+			}
+			agent.SetDestination(goal);
+		}
 		/*else{
 			agent.Stop();
 			agent.velocity=Vector3.zero;
@@ -122,7 +131,7 @@ public class ZombieMoveAuto : MonoBehaviour
 			}
 			else{
 				rotation = Quaternion.LookRotation(goal - transform.position);
-				animacao.SetFloat("veloc", 10*moveSpeed);
+				animacao.SetFloat("veloc", agent.speed);
 			}
 		}
 		cont++;
