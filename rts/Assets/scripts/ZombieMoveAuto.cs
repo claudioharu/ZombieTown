@@ -19,6 +19,7 @@ public class ZombieMoveAuto : MonoBehaviour
 	public bool temMovimento = false;
 	public bool perseguindo = false;
 	public float visionThreshhold = 100;
+	public float hearThreshhold = 50;
 	public float FOV = 45;
 	
 	void Start()
@@ -55,9 +56,22 @@ public class ZombieMoveAuto : MonoBehaviour
 				perseguindo = true;
 			}
 		}
+		if(!perseguindo){
+		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Sound")){
+			Vector3 pos = obj.transform.position;
+			float squareDistance = (transform.position - pos).sqrMagnitude;
+			if(squareDistance<smalestDistance && squareDistance < hearThreshhold){
+				smalestDistance = squareDistance;
+				target = pos;
+				temMovimento = true;
+				perseguindo = true;
+			}
+		}
+		}
 		if(perseguindo)
 			return target;
 		else{
+
 			if (agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0){
 				random = Random.Range(0, objs.Length - 1);
 			}

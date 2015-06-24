@@ -4,7 +4,7 @@ using System.Collections;
 public class DayAndNight : MonoBehaviour {
 
 	public Light[] lights;
-	public string[] enemiesTag;
+	public float dayLength = 100;
 
 	private bool night = false;
 
@@ -14,12 +14,12 @@ public class DayAndNight : MonoBehaviour {
 			light.enabled = !light.enabled;
 		}
 		//Alterar a velocidade dos zumbis
-		Invoke ("makingLight", 2);
+		Invoke ("makingLight", dayLength);
 	}
 
 	// Use this for initialization
 	void Start () {
-		Invoke("makingLight", 2);
+		Invoke("makingLight", dayLength);
 	}
 	
 
