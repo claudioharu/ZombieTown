@@ -12,6 +12,8 @@ public class ScreenSystem : MonoBehaviour {
 	public static int points = 0;
 	public static int money = 1000;
 	public static int humansRescued = 0;
+	string contentSoldier = "";
+	string contentSentry = "";
 	
 	void OnGUI(){
 		
@@ -29,6 +31,25 @@ public class ScreenSystem : MonoBehaviour {
 		GUI.Label (new Rect(470, 10, 200, 30), "Sentries: " + sentries);
 		GUI.Label (new Rect(590, 10, 200, 30), "Points: " + points);
 		GUI.Label (new Rect(705, 10, 200, 30), "Z$ " + money);
+		
+		if(DragHanglerSoldier.noMoney == true && DragHanglerSoldier.timer > 0){
+			contentSoldier = "You don't have enough money to buy.";
+			
+		}
+		if (DragHanglerSoldier.timer <= 0) {
+			contentSoldier = "";
+		}
+		
+		if(DragHanglerSentry.noMoney == true && DragHanglerSentry.timer > 0){
+			contentSentry = "You don't have enough money to buy.";
+			
+		}
+		if (DragHanglerSentry.timer <= 0) {
+			contentSentry = "";
+		}
+		
+		GUI.Label (new Rect(Screen.width - 170, Screen.height/2 - 100, 200, 30), contentSoldier);
+		GUI.Label (new Rect(Screen.width - 170, Screen.height/2 - 100, 200, 30), contentSentry);
 	}
 	
 	

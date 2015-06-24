@@ -11,7 +11,8 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 	private bool creatingUnit = false;
 	private Vector3 dist;
 	private float posX, posY;
-	
+	public static bool noMoney = false;
+	public static float timer = 0.0f;
 	
 	public void OnPointerClick (PointerEventData eventData)
 	{
@@ -25,11 +26,21 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 		
 		if (ScreenSystem.money < 500) {
 			creatingUnit = false;
+			print ("You don't have enough money to buy.");
+			noMoney = true;
+			timer = 3.0f;
+		}
+		else{
+			noMoney = false;
 		}
 	}
 	
 	public void FixedUpdate()
 	{
+		timer -= Time.deltaTime;
+		if(timer <= 0){
+			timer = 0;
+		}
 		//print (creatingUnit);
 		if(creatingUnit){
 			
@@ -51,3 +62,4 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 		}
 	}
 }
+

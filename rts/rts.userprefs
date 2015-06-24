@@ -1,8 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HumanMoveAuto.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ScreenSystem.cs">
     <Files>
-      <File FileName="Assets\HumanMoveAuto.cs" Line="122" Column="29" />
+      <File FileName="..\..\..\Jogos Digitais\ZombieTown - Cópia para mexer\rts\Assets\scripts\ScreenSystem.cs" Line="85" Column="2" />
+      <File FileName="..\..\..\Jogos Digitais\ZombieTown - Cópia para mexer\rts\Assets\scripts\DragHanglerSoldier.cs" Line="65" Column="1" />
+      <File FileName="..\..\..\Jogos Digitais\ZombieTown - Cópia para mexer\rts\Assets\scripts\DragHanglerSentry.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\DragHanglerSentry.cs" Line="61" Column="2" />
+      <File FileName="Assets\scripts\DragHanglerSoldier.cs" Line="65" Column="1" />
+      <File FileName="Assets\scripts\ScreenSystem.cs" Line="85" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
