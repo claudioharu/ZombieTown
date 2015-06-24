@@ -7,7 +7,7 @@ public class DieAfterAWhile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Invoke("DeletingBullet", TimeToDelete);
+		Invoke("DeletingSelf", TimeToDelete);
 	}
 
 	//Deleting after 2 seconds

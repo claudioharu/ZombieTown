@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZombieMoveAuto : MonoBehaviour
+public class HumanMoveAuto : MonoBehaviour
 {
     protected Animator animacao;
 
@@ -13,7 +13,6 @@ public class ZombieMoveAuto : MonoBehaviour
 	private int random;
 	private GameObject [] objs;
 
-	public string[] toFollow;
 	public Quaternion rotation;
 	public float moveSpeed = 1.0f;
 	public float goalRadius = 0.1f;
@@ -25,14 +24,14 @@ public class ZombieMoveAuto : MonoBehaviour
 	
 	void Start()
 	{	
-		objs = GameObject.FindGameObjectsWithTag("WayPoint");
+		//objs = GameObject.FindGameObjectsWithTag("WayPoint");
 		animacao = GetComponent<Animator> ();
         agent = GetComponent<NavMeshAgent>();
 
 		cont = Random.Range(0,periodoDeAtualizacao);
 		goal = transform.position;
 		rotation = Quaternion.LookRotation(goal - transform.position);
-		random = Random.Range(0, objs.Length - 1);
+		//random = Random.Range(0, objs.Length - 1);
 	}
 
 	bool visible(Vector3 pos){
@@ -47,19 +46,17 @@ public class ZombieMoveAuto : MonoBehaviour
 		Vector3 target = goal;
 		perseguindo = false;
 		float smalestDistance = float.MaxValue;
-		foreach (string tag in toFollow){
-			foreach (GameObject obj in GameObject.FindGameObjectsWithTag(tag)){
-				Vector3 pos = obj.transform.position;
-				float squareDistance = (transform.position - pos).sqrMagnitude;
-				if(visible(pos) && squareDistance<smalestDistance && squareDistance < visionThreshhold){
-					smalestDistance = squareDistance;
-					target = pos;
-					temMovimento = true;
-					perseguindo = true;
-				}
+		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("soldier")){
+			Vector3 pos = obj.transform.position;
+			float squareDistance = (transform.position - pos).sqrMagnitude;
+			if(visible(pos) && squareDistance<smalestDistance && squareDistance < visionThreshhold){
+				smalestDistance = squareDistance;
+				target = pos;
+				temMovimento = true;
+				perseguindo = true;
 			}
 		}
-		if(!perseguindo){
+		/*if(!perseguindo){
 		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Sound")){
 			Vector3 pos = obj.transform.position;
 			float squareDistance = (transform.position - pos).sqrMagnitude;
@@ -70,10 +67,10 @@ public class ZombieMoveAuto : MonoBehaviour
 				perseguindo = true;
 			}
 		}
-		}
-		if(perseguindo)
+		}*/
+		//if(perseguindo)
 			return target;
-		else{
+		/*else{
 
 			if (agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0){
 				random = Random.Range(0, objs.Length - 1);
@@ -91,7 +88,7 @@ public class ZombieMoveAuto : MonoBehaviour
 			
 				//}
 			//}//
-		}
+		}*/
 	}
 	//Vector3 passoRandom(){
 	//	Vector3 resposta = transform.position + Random.Range(-180,180)

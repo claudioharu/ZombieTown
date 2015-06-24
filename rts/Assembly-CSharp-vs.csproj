@@ -81,6 +81,7 @@
      <Compile Include="Assets\Environment\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Environment\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Environment\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\HumanMoveAuto.cs" />
      <Compile Include="Assets\MakeSound.cs" />
      <Compile Include="Assets\ZombieCharacterPack\ZombieWalk.cs" />
      <Compile Include="Assets\scripts\ActivateText.cs" />
