@@ -17,7 +17,7 @@ public class RescuePointScript : MonoBehaviour {
 				//ScreenSystem.zombiesKilled += 1;
 				Destroy(collision.gameObject);
 				ScreenSystem.humansRescued += 1;
-				ScreenSystem.points += 100;
+				ScreenSystem.points += 200;
 				ScreenSystem.money += 150;
 				//Destroy(gameObject);
 				return;
