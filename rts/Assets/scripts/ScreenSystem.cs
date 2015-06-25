@@ -6,6 +6,8 @@ public class ScreenSystem : MonoBehaviour {
 	public GUISkin guiSkin;
 	public static int zombiesKilled = 0;
 	public static int humans;
+	public static int humansBegin; //Humans in town at beginning
+	public static int humansKilled = 0;
 	public static int sentries;
 	public static int soldiers;
 	public static int zombiesAlive;
@@ -15,6 +17,14 @@ public class ScreenSystem : MonoBehaviour {
 	string contentSoldier = "";
 	string contentSentry = "";
 	
+	void Start(){
+		humansBegin = CountHumans ();
+		zombiesKilled = 0;
+		humansKilled = 0;
+		points = 0;
+		money = 1000;
+		humansRescued = 0;
+	}
 	void OnGUI(){
 		
 		humans = CountHumans();
@@ -50,6 +60,16 @@ public class ScreenSystem : MonoBehaviour {
 		
 		GUI.Label (new Rect(Screen.width - 170, Screen.height/2 - 100, 200, 30), contentSoldier);
 		GUI.Label (new Rect(Screen.width - 170, Screen.height/2 - 100, 200, 30), contentSentry);
+		
+		if (zombiesAlive == 0 || (humans <= 0 && humansRescued > 0)) {
+			Application.LoadLevel("victory");
+		}
+		
+		if(humansKilled == humansBegin){
+			Application.LoadLevel("gameover");
+			
+		}
+		
 	}
 	
 	
