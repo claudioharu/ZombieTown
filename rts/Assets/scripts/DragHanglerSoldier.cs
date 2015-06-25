@@ -19,7 +19,7 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 
 	public void OnPointerClick (PointerEventData eventData)
 	{
-		print("eu");
+		//print("eu");
 		
 		dist = Camera.main.WorldToScreenPoint(unitType.transform.position);
 		
