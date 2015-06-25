@@ -15,6 +15,8 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 	public static float timer = 0.0f;
 	public Transform positionSoldier;
 
+	public GameObject effectObject;
+
 	public void OnPointerClick (PointerEventData eventData)
 	{
 		print("eu");
@@ -52,6 +54,7 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 				
 				
 				Instantiate(unitType, positionSoldier.position, unitType.transform.rotation);
+				Instantiate(effectObject, positionSoldier.position, effectObject.transform.rotation);
 				ScreenSystem.soldiers += 1;
 				ScreenSystem.money -= 500;
 				if (ScreenSystem.money < 0) {
