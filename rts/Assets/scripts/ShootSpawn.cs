@@ -31,15 +31,16 @@ public class ShootSpawn : MonoBehaviour {
 	}
 	
 	void Shoot(){
-		
-		if(targetEnemy != null){
-			GameObject instance = Instantiate(bullet, bulletSpaw.transform.position, bullet.transform.rotation) as GameObject;
-			
-			if(instance.GetComponent<Rigidbody>()){
-				instance.GetComponent<Rigidbody>().AddForce((bulletSpaw.transform.forward).normalized*speed*Time.deltaTime, ForceMode.VelocityChange);
+		if(Commands.shoot){
+			print (Commands.shoot);
+			if(targetEnemy != null){
+				GameObject instance = Instantiate(bullet, bulletSpaw.transform.position, bullet.transform.rotation) as GameObject;
+				
+				if(instance.GetComponent<Rigidbody>()){
+					instance.GetComponent<Rigidbody>().AddForce((bulletSpaw.transform.forward).normalized*speed*Time.deltaTime, ForceMode.VelocityChange);
+				}
 			}
 		}
-		
 		Invoke("Shoot", fireDelay);
 	}
 	
