@@ -60,8 +60,8 @@ public class ScreenSystem : MonoBehaviour {
 			contentSentry = "";
 		}
 		
-		GUI.Label (new Rect(Screen.width - 170, Screen.height/2 - 100, 200, 30), contentSoldier);
-		GUI.Label (new Rect(Screen.width - 170, Screen.height/2 - 100, 200, 30), contentSentry);
+		GUI.Label (new Rect(Screen.width - 170, 10, 200, 30), contentSoldier);
+		GUI.Label (new Rect(Screen.width - 170, 10, 200, 30), contentSentry);
 		
 		if (zombiesAlive == 0 || (humans <= 0 && humansRescued > 0)) {
 			Application.LoadLevel("victory");
