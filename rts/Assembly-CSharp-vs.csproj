@@ -102,6 +102,7 @@
      <Compile Include="Assets\scripts\DragSelect.cs" />
      <Compile Include="Assets\scripts\FlashIfSelected.cs" />
      <Compile Include="Assets\scripts\FlashMaterial.cs" />
+     <Compile Include="Assets\scripts\HpZombies.cs" />
      <Compile Include="Assets\scripts\HumanMoveAuto.cs" />
      <Compile Include="Assets\scripts\Infecting.cs" />
      <Compile Include="Assets\scripts\KillingEnemies.cs" />

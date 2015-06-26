@@ -20,7 +20,7 @@ public class AudioZombie : MonoBehaviour {
 
 		for (i = 0; i < 24; i++) {
 			pathAudio = "Audio/zombie-" + (i+1);
-			print (pathAudio);
+			//print (pathAudio);
 			clipZombie[i] = (AudioClip)Resources.Load(pathAudio);
 		}
 	}
@@ -29,7 +29,7 @@ public class AudioZombie : MonoBehaviour {
 	void Update () {
 		if (timer < 0) {
 			timer = Random.Range (5.0f, 20.0f);
-			print (timer);
+			//print (timer);
 			PlaySound ();
 		}
 		timer -= Time.deltaTime;
