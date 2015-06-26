@@ -1,9 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\minMapCamera.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Commands.cs">
     <Files>
-      <File FileName="Assets\scripts\DragHanglerSoldier.cs" Line="1" Column="1" />
-      <File FileName="Assets\minMapCamera.cs" Line="44" Column="18" />
+      <File FileName="Assets\scripts\DragHanglerSoldier.cs" Line="58" Column="4" />
+      <File FileName="Assets\minMapCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\DragHanglerSentry.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\BasicSoldierMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\SelectPlayerUnitsOnClicked.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Infecting.cs" Line="61" Column="2" />
+      <File FileName="Assets\scripts\RescuePointScript.cs" Line="13" Column="38" />
+      <File FileName="Assets\scripts\Commands.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

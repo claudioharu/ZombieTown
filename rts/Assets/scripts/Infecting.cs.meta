@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 0050ae6e3b8b46043ac3cb40a132b57e
-timeCreated: 1433858315
+timeCreated: 1435283336
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - unitType: {instanceID: 0}
+  - humanPosition: {instanceID: 0}
+  - audioDeathHuman: {instanceID: 0}
+  - clipDeathHuman: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BasicSoldierMovement : MonoBehaviour {
-
+	
 	protected Animation animacao;
 	
 	private NavMeshAgent agent;
@@ -14,6 +14,12 @@ public class BasicSoldierMovement : MonoBehaviour {
 	public float goalRadius = 0.1f;	
 	public bool temMovimento = false;
 	
+	public AudioSource audioTakeOrders;
+	public AudioClip clipTakeOrders;
+	
+	public AudioSource audioWalk;
+	public AudioClip clipWalk;
+	
 	
 	
 	// Use this for initialization
@@ -23,6 +29,18 @@ public class BasicSoldierMovement : MonoBehaviour {
 		
 		goal = transform.position;
 		
+		audioTakeOrders = (AudioSource) gameObject.AddComponent<AudioSource>();
+		audioTakeOrders.clip = clipTakeOrders;
+		audioTakeOrders.spatialBlend = 1;
+		audioTakeOrders.dopplerLevel = 0;
+		audioTakeOrders.minDistance = 20;
+		
+		audioWalk = (AudioSource) gameObject.AddComponent<AudioSource>();
+		audioWalk.clip = clipWalk;
+		audioWalk.loop = true;
+		audioWalk.spatialBlend = 1;
+		audioWalk.dopplerLevel = 0;
+		audioWalk.minDistance = 20;
 		
 		//rotation = Quaternion.LookRotation(goal - transform.position);
 	}
@@ -31,6 +49,9 @@ public class BasicSoldierMovement : MonoBehaviour {
 	{
 		goal = newGoal;
 		temMovimento = true;
+		audioTakeOrders.Play();
+		audioWalk.Play ();
+		
 		
 	}
 	
@@ -48,11 +69,18 @@ public class BasicSoldierMovement : MonoBehaviour {
 				temMovimento = false;
 				//animacao.SetFloat("speed",0);
 				animacao.Play("soldierIdle");
+				
 			}
 			else{
 				rotation = Quaternion.LookRotation(goal - transform.position);
 				//animacao.SetFloat("speed", 10*moveSpeed);
 				animacao.Play("soldierRun");
+				
+			}
+		}
+		else{
+			if(audioWalk.isPlaying){
+				audioWalk.Stop ();
 			}
 		}
 	}

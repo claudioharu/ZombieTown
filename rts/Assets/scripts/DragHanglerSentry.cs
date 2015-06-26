@@ -12,6 +12,13 @@ public class DragHanglerSentry : MonoBehaviour, IPointerClickHandler {
 	private float posX, posY;
 	public static bool noMoney = false;
 	public static float timer = 0.0f;
+	public AudioSource audioPutSentry;
+	public AudioClip clipPutSentry;
+	
+	void Start(){
+		audioPutSentry = (AudioSource) gameObject.AddComponent<AudioSource>();
+		audioPutSentry.clip = clipPutSentry;
+	}
 	
 	public void OnPointerClick (PointerEventData eventData)
 	{
@@ -47,7 +54,7 @@ public class DragHanglerSentry : MonoBehaviour, IPointerClickHandler {
 				Vector3 curPos = new Vector3(Input.mousePosition.x , Input.mousePosition.y , dist.z); 
 				Vector3 worldPos = Camera.main.ScreenToWorldPoint(curPos);
 				
-				
+				audioPutSentry.Play();
 				Instantiate(unitType, worldPos, unitType.transform.rotation);
 				ScreenSystem.sentries += 1;
 				ScreenSystem.money -= 1000;

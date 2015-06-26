@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 guid: dbdc935708bed804f88e46f06fe60970
-timeCreated: 1435064654
+timeCreated: 1435282083
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - unitType: {instanceID: 0}
+  - positionSoldier: {instanceID: 0}
+  - audioPutSoldier: {instanceID: 0}
+  - clipPutSoldier: {fileID: 8300000, guid: 14ce967ff713f234d920554f70da04a9, type: 3}
+  - effectObject: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

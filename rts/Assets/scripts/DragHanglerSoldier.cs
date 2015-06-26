@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
 
@@ -14,9 +15,16 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 	public static bool noMoney = false;
 	public static float timer = 0.0f;
 	public Transform positionSoldier;
-
+	public AudioSource audioPutSoldier;
+	public AudioClip clipPutSoldier;
+	
 	public GameObject effectObject;
-
+	
+	void Start(){
+		audioPutSoldier = (AudioSource) gameObject.AddComponent<AudioSource>();
+		audioPutSoldier.clip = clipPutSoldier;
+	}
+	
 	public void OnPointerClick (PointerEventData eventData)
 	{
 		//print("eu");
@@ -47,23 +55,24 @@ public class DragHanglerSoldier : MonoBehaviour, IPointerClickHandler {
 		//print (creatingUnit);
 		if(creatingUnit){
 			
+			audioPutSoldier.Play();
+			
 			//if(Input.GetMouseButton(1)){
-				
-				Vector3 curPos = new Vector3(Input.mousePosition.x , Input.mousePosition.y , dist.z); 
-				Vector3 worldPos = Camera.main.ScreenToWorldPoint(curPos);
-				
-				
-				Instantiate(unitType, positionSoldier.position, unitType.transform.rotation);
-				Instantiate(effectObject, positionSoldier.position, effectObject.transform.rotation);
-				ScreenSystem.soldiers += 1;
-				ScreenSystem.money -= 500;
-				if (ScreenSystem.money < 0) {
-					ScreenSystem.money = 0;
-				}
-				
-				creatingUnit = false;
+			
+			Vector3 curPos = new Vector3(Input.mousePosition.x , Input.mousePosition.y , dist.z); 
+			Vector3 worldPos = Camera.main.ScreenToWorldPoint(curPos);
+			
+			
+			Instantiate(unitType, positionSoldier.position, unitType.transform.rotation);
+			Instantiate(effectObject, positionSoldier.position, effectObject.transform.rotation);
+			ScreenSystem.soldiers += 1;
+			ScreenSystem.money -= 500;
+			if (ScreenSystem.money < 0) {
+				ScreenSystem.money = 0;
+			}
+			
+			creatingUnit = false;
 			//}
 		}
 	}
 }
-
