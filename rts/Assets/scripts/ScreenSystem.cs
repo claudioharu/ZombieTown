@@ -14,6 +14,8 @@ public class ScreenSystem : MonoBehaviour {
 	public static int points = 0;
 	public static int money = 1000;
 	public static int humansRescued = 0;
+	public static int selectorGameover;
+	
 	string contentSoldier = "";
 	string contentSentry = "";
 	
@@ -65,9 +67,18 @@ public class ScreenSystem : MonoBehaviour {
 			Application.LoadLevel("victory");
 		}
 		
-		if(humansKilled == humansBegin){
+		//print (0.8 * humansBegin);
+		//print (humansKilled);
+		
+		//Se humanos mortos forem mais do que 80% dos que tinham no inicio, gameover.
+		if(humansKilled > (0.8 * humansBegin)){
 			Application.LoadLevel("gameover");
-			
+			selectorGameover = 1;
+		}
+		
+		if (money < 500 && soldiers <= 0) {
+			Application.LoadLevel("gameover");
+			selectorGameover = 2;
 		}
 		
 	}
