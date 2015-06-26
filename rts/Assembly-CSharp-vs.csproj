@@ -123,6 +123,7 @@
      <Compile Include="Assets\scripts\UnitManager.cs" />
      <Compile Include="Assets\scripts\ZombieMoveAuto.cs" />
      <Compile Include="Assets\scripts\ZombieRandomMovement.cs" />
+     <Compile Include="Assets\scripts\ZombieSpawn.cs" />
      <Compile Include="Assets\scripts\ZoomingCamera.cs" />
      <Compile Include="Assets\tst.cs" />
      <None Include="Assets\Environment\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
