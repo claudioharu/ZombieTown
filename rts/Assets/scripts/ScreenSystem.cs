@@ -37,8 +37,8 @@ public class ScreenSystem : MonoBehaviour {
 		GUI.skin = guiSkin;
 		GUI.Label (new Rect(10, 10, 200, 30), "Zombies Killed: " + zombiesKilled);
 		GUI.Label (new Rect(10, 30, 200, 30), "Zombies Alive: " + zombiesAlive);
-		GUI.Label (new Rect(170, 10, 200, 30), "Humans Alive: " + humans);
-		GUI.Label (new Rect(170, 30, 200, 30), "Humans Rescued: " + humansRescued);
+		GUI.Label (new Rect(170, 10, 200, 30), "Civilians Alive: " + humans);
+		GUI.Label (new Rect(170, 30, 200, 30), "Civilians Rescued: " + humansRescued);
 		GUI.Label (new Rect(350, 10, 200, 30), "Soldiers: " + soldiers);
 		GUI.Label (new Rect(470, 10, 200, 30), "Sentries: " + sentries);
 		GUI.Label (new Rect(590, 10, 200, 30), "Points: " + points);

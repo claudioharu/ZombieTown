@@ -12,6 +12,7 @@ public class HumanMoveAuto : MonoBehaviour
 	private int periodoDeAtualizacao = 10;
 	private int random;
 	private GameObject [] objs;
+	private GameObject objGoal;
 
 	public Quaternion rotation;
 	public float moveSpeed = 1.0f;
@@ -52,6 +53,7 @@ public class HumanMoveAuto : MonoBehaviour
 			if(visible(pos) && squareDistance < smalestDistance && squareDistance < visionThreshhold){
 				smalestDistance = squareDistance;
 				target = pos;
+				objGoal = obj;
 				temMovimento = true;
 				perseguindo = true;
 			}
@@ -103,7 +105,7 @@ public class HumanMoveAuto : MonoBehaviour
 		}
 		//Move towards our goal
 		/*transform.position += (goal - transform.position).normalized*moveSpeed*Time.deltaTime;
-		*/transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * Damping);
+		*///transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * Damping);
         
 
 		if(perseguindo){
@@ -117,10 +119,18 @@ public class HumanMoveAuto : MonoBehaviour
         //else agent.SetDestination(transform.position);
 		if(temMovimento){
 			if ( (goal - transform.position).magnitude < 1.0f){
-				temMovimento = false;
 				animacao.SetFloat("speed",0);
+				temMovimento = false;
 			}
-			else{
+			if(agent.remainingDistance < 3.5f && objGoal.GetComponent<BasicSoldierMovement>().temMovimento == false){
+				animacao.SetFloat("speed",0);
+				temMovimento = false;
+			}
+			/*else{
+				rotation = Quaternion.LookRotation(goal - transform.position);
+				animacao.SetFloat("speed", 10*moveSpeed);
+			}*/
+			if(agent.remainingDistance >= 1.0f && objGoal.GetComponent<BasicSoldierMovement>().temMovimento == true){
 				rotation = Quaternion.LookRotation(goal - transform.position);
 				animacao.SetFloat("speed", 10*moveSpeed);
 			}
