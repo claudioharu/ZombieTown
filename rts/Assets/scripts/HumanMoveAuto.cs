@@ -49,7 +49,7 @@ public class HumanMoveAuto : MonoBehaviour
 		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("soldier")){
 			Vector3 pos = obj.transform.position;
 			float squareDistance = (transform.position - pos).sqrMagnitude;
-			if(visible(pos) && squareDistance<smalestDistance && squareDistance < visionThreshhold){
+			if(visible(pos) && squareDistance < smalestDistance && squareDistance < visionThreshhold){
 				smalestDistance = squareDistance;
 				target = pos;
 				temMovimento = true;
@@ -105,9 +105,12 @@ public class HumanMoveAuto : MonoBehaviour
 		/*transform.position += (goal - transform.position).normalized*moveSpeed*Time.deltaTime;
 		*/transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * Damping);
         
-		if(perseguindo)
-		 agent.SetDestination(goal);
-		/*else{
+
+		if(perseguindo){
+			agent.SetDestination(goal);
+		}
+
+			/*else{
 			agent.Stop();
 			agent.velocity=Vector3.zero;
 		}*/
