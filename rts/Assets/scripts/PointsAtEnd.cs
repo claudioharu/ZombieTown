@@ -8,13 +8,16 @@ public class PointsAtEnd : MonoBehaviour {
 	void Start () {
 		GameObject canvas = GameObject.Find("Canvas");
 		Text[] textValue = canvas.GetComponentsInChildren<Text>();
-		switch(ScreenSystem.selectorGameover){
-		case 1:
-			textValue[3].text = "More than 80% of the civilians have died.";
-			break;
-		case 2:
-			textValue[3].text = "No soldiers and no Zumbidollars.";
-			break;
+		switch(ScreenSystem.selectorEnding){
+			case 0:
+				textValue[3].text = "You saved at least 20% of all civilians.";
+				break;
+			case 1:
+				textValue[3].text = "More than 80% of the civilians have died.";
+				break;
+			case 2:
+				textValue[3].text = "No soldiers and no Zumbidollars.";
+				break;
 		}
 		
 		textValue[4].text = "Total Points: " + ScreenSystem.points.ToString();

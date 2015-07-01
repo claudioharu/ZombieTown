@@ -24,10 +24,15 @@ public class ShootSpawn : MonoBehaviour {
 		
 		Collider[] enemysArray = Physics.OverlapSphere(laser.transform.position, radius, mask);
 		
-		if(enemysArray.Length > 0)
+		if(enemysArray.Length > 0){
 			targetEnemy = enemysArray[0].gameObject;
-		else
+			Vector3 targetPosition = targetEnemy.transform.position;
+			targetPosition.y= transform.position.y;
+			transform.LookAt(targetPosition);
+		}
+		else{
 			targetEnemy = null;
+		}
 	}
 	
 	void Shoot(){

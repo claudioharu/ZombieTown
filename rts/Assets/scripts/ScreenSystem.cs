@@ -14,7 +14,7 @@ public class ScreenSystem : MonoBehaviour {
 	public static int points = 0;
 	public static int money = 1000;
 	public static int humansRescued = 0;
-	public static int selectorGameover;
+	public static int selectorEnding;
 	
 	string contentSoldier = "";
 	string contentSentry = "";
@@ -65,17 +65,18 @@ public class ScreenSystem : MonoBehaviour {
 
 		if (zombiesAlive == 0 || (humans <= 0 && humansRescued > 0)) {
 			Application.LoadLevel("victory");
+			selectorEnding = 0;
 		}
 
 		//Se humanos mortos forem mais do que 80% dos que tinham no inicio, gameover.
 		if(humansKilled > (0.8 * humansBegin)){
 			Application.LoadLevel("gameover");
-			selectorGameover = 1;
+			selectorEnding = 1;
 		}
 		
 		if (money < 500 && soldiers <= 0) {
 			Application.LoadLevel("gameover");
-			selectorGameover = 2;
+			selectorEnding = 2;
 		}
 
 		//Sai para o menu se apertar ESC
