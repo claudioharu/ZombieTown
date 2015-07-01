@@ -19,6 +19,7 @@ public class DayAndNight : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		night = false;
 		Invoke("makingLight", dayLength);
 	}
 	
