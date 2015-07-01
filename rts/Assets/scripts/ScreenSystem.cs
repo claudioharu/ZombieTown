@@ -62,14 +62,11 @@ public class ScreenSystem : MonoBehaviour {
 		
 		GUI.Label (new Rect(Screen.width - 170, 10, 200, 30), contentSoldier);
 		GUI.Label (new Rect(Screen.width - 170, 10, 200, 30), contentSentry);
-		
+
 		if (zombiesAlive == 0 || (humans <= 0 && humansRescued > 0)) {
 			Application.LoadLevel("victory");
 		}
-		
-		//print (0.8 * humansBegin);
-		//print (humansKilled);
-		
+
 		//Se humanos mortos forem mais do que 80% dos que tinham no inicio, gameover.
 		if(humansKilled > (0.8 * humansBegin)){
 			Application.LoadLevel("gameover");
@@ -80,7 +77,12 @@ public class ScreenSystem : MonoBehaviour {
 			Application.LoadLevel("gameover");
 			selectorGameover = 2;
 		}
-		
+
+		//Sai para o menu se apertar ESC
+		if (Input.GetKey (KeyCode.Escape)){
+			Application.LoadLevel ("menu");
+		}
+
 	}
 	
 	

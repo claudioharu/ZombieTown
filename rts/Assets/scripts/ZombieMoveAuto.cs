@@ -76,7 +76,7 @@ public class ZombieMoveAuto : MonoBehaviour
 		if(perseguindo)
 			return target;
 		else{
-
+			//print (agent.remainingDistance);
 			if (agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0){
 				random = Random.Range(0, objs.Length - 1);
 			}
