@@ -22,16 +22,27 @@ public class SelectPlayerUnitsOnClicked : MonoBehaviour {
 		audioSelSoldier.Play();
 		if(!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift) ){
 			//Tell the player unit manager to select this object
+			
+			GameObject[] aux;
+			aux = GameObject.FindGameObjectsWithTag("selected");
+			foreach (GameObject obj in aux)
+			{
+				obj.SetActiveRecursively(false);
+			}
+			
+			foreach (GameObject obj in objectsToActivate)
+			{
+				obj.SetActiveRecursively(true);
+			}
 			unitManager.SelectSingleUnit(gameObject);
 			
 		}
 		else{
+			foreach (GameObject obj in objectsToActivate)
+			{
+				obj.SetActiveRecursively(true);
+			}
 			unitManager.SelectAdditionalUnit(gameObject);
-		}
-		
-		foreach(GameObject obj in objectsToActivate)
-		{
-			obj.SetActiveRecursively(true);
 		}
 		
 	}
